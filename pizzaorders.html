@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Pizzeria Menu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css"/>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/answer.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="admin p-1">
+            <h5>
+                Use this section for creating menu of the Pizzeria
+            </h5>
+        <div class="row" >
+                <div class="col-md-4 mt-2 border-right">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Pizza Name:</span>
+                      </div>
+                      <input type="text" id="pzName" class="form-control"  aria-label="item" aria-describedby="basic-addon1">
+                    </div>
+                    
+                    <h5>Select one or more crusts:</h5>
+                    <select class="custom-select custom-select-sm">
+                        <option value="0">Select a crust:</option>
+                        <option value="100">NY Crust</option>
+                        <option value="200">Deep dish Crust</option>
+                        <option value="300">Thin Crust</option>
+                      </select>
+                    <div class="input-group mb-2">
+                        <h5>Select a Size</h5>
+                        <div id="pizzaSize" class="col-12">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="large" name="size">
+                                <label class="custom-control-label" for="large">Large</label>
+                            </div>
+                            
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="medium" name="size">
+                                <label class="custom-control-label" for="medium">Medium</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" class="custom-control-input" id="small" name="size">
+                                <label class="custom-control-label" for="small">small</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-3  border-right ">
+                     <h5>List of toppings</h5>
+                   <div id="toppingList">
+
+                   </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="input-group-prepend align-top">
+                        <span class="input-group-text" id="basic-addon2">Comments:</span>
+                      </div>
+                      <textarea id="details" class="form-control" aria-label="item" aria-describedby="basic-addon2">
+                      </textarea>
+                
+                  <div class="mt-2 p-2">
+                    <button id="order" class="btn-md btn-primary">Order</button>
+                  </div>
+                  <div class="mt-2 p-2">
+                    <button id="reset" class="btn-md btn-danger">Reset</button>
+                  </div>
+                </div>
+               </div>
+            </div>
+        </div>
+        <hr>
+        <div class="p-2">
+            <h4>List of your orders are here:</h4>
+        </div>
+        <div class="row">
+            <div class="card-group" id="orders">
+
+
+            </div>
+        </div>
+    </div>    
+</body>
