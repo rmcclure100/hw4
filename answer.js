@@ -2,9 +2,17 @@
  * Your answers to HW#4 goes here. 
  */
 //var button = document.createElement("button");
-class Pizzeria{
-    constructor(element){
-        this._menuItems = {};
+function start(){
+
+    var pizza = new PizzaOrderItem();
+    var orderb = document.getElementById('order');
+    orderb.onclick=function(){
+    var price = 0;
+
+            pizza._name = document.getElementById('pizzaName').value; 
+
+            opts = document.getElementsByClassName("custom-select custom-select-sm")[0].options;
+    };
         var cart = //creates variable for cart
         { 
             items: [] //empty array
@@ -20,9 +28,21 @@ class Pizzeria{
             
             renderCart(cart, $('.cart-items-container'));
 }
-$('.reset').click(function() {
+var resetb = document.getElementById('reset');
+
+resetb.onclick = function setBack(){
+    pizza.name ="";
+
+            pizza._type ="";
+
+            pizza._src ="";
+
+            pizza._toppings ="";
+
+            pizza._size ="";
+};
     cart = {
         items: [] //empty array
     }
     renderCart(cart, $('.cart-items-container'));
-});
+}};
