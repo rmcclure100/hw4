@@ -11,7 +11,16 @@ function start(){
 
             pizza._name = document.getElementById('pizzaName').value; 
 
-            opts = document.getElementsByClassName("custom-select custom-select-sm")[0].options;
+            select = document.getElementsByClass.Name("custom-select custom-select-sm")[0].options;
+            if(select.selectedIndex == '1'){
+                pizza._src='./img/ny.jpg';
+            }
+            if(select.selectedIndex == '2'){
+                pizza._src='./img/ddish.jpg';
+            }
+            if(select.selectedIndex == '3'){
+                pizza._src='./img/thincrust.jpg';
+            }
     };
         var cart = //creates variable for cart
         { 
@@ -46,3 +55,12 @@ resetb.onclick = function setBack(){
     }
     renderCart(cart, $('.cart-items-container'));
 }};
+if (document.startState !== "loading") {
+
+    start();
+
+} else {
+
+    document.addEventListener("DOMContentLoaded", start);
+
+}  
